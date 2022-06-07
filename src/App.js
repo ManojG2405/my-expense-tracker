@@ -4,7 +4,7 @@ import Expenses from './components/Expenses/Expenses.js';
 import NewExpense from './components/NewExpenses/NewExpense';
 
 
-let DUMMY_EXPENSES = [
+let DUMMY_EXPENSE = [
   {
     id: 'e1',
     title: 'Birthday Party',
@@ -33,13 +33,13 @@ let DUMMY_EXPENSES = [
 
 const App = () => {
   
-  const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
+  const [expenses, setExpenses] = useState(DUMMY_EXPENSE);
 
 const addExpenseHandler = (expense) =>{
 
   const updatedExpense = [expense, ...expenses];
   setExpenses(updatedExpense);
-}
+};
   return (
     <div className="App">
       <h1>My Expense Tracker</h1>
